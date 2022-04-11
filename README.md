@@ -20,7 +20,7 @@ Trady is a web-based system that allows any tradesman to advertise their job and
 
 
 # Installation
-In this application i used paypal for payments feature in order to use this system,
+In this web-based system i used paypal for payments feature in order to use this system,
 
 1. Clone the project
 2. Add your paypal client id to 'checkout.php' that is located on 'pages/checkout.php' as follows,
