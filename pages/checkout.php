@@ -79,7 +79,9 @@ $totalPrice = $price - $discount;
 
 <!--------------------------------------------Paypal Script---------------------------------------------->
 
-<script src="https://www.paypal.com/sdk/js?client-id=AWf2wt-Ir8cLbnvohKqZfT16Jz8fVc8-K3t-x4AaLI7l78_fhOi6qKpbhPXGHuAdA2o8HGHHQ1GbfO1x&disable-funding=credit,card"></script>
+<!-- Paypal client ID -->
+<script src=""></script>
+
 <script>
     paypal.Buttons({
         style:{
