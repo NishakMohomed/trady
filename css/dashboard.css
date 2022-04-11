@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-moz-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: black;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: black;
+    color: #fff;
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 3.5rem;
+    padding: 1rem 1rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.938rem;
+    background-color: #F9F6FD;
+    color: #58555E;
+}
+
+h3{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
+    padding: 0 1rem;
+    z-index: 100;
+}
+
+.header_container{
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    justify-content: space-between;
+}
+
+.header_name{
+    width: 200px;
+    height: 35px;
+}
+
+.header_logo{
+    color: #19181B;
+    font-weight: 500;
+    display: none;
+}
+
+.header_icon, .header_toggle{
+    font-size: 1.2rem;
+}
+
+.header_toggle{
+    color: #19181B;
+    cursor: pointer;
+    float: right;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    padding: 1rem 1rem 3rem;
+    background-color: #FFFFFF;
+    box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+    z-index: 100;
+    transition: 0.4s;
+}
+
+.nav_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    scrollbar-width: none; /* for mozilla browser */
+}
+
+.nav_container::-webkit-scrollbar{
+    display: none;  /* for chrome browser and others */
+}
+
+.nav_logo{
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.nav_list, .nav_items{
+    display: grid;
+}
+
+.nav_list{
+    row-gap: 2.5rem;
+}
+
+.nav_items{
+    row-gap: 1.5rem;
+}
+
+.nav_subtitle{
+    font-size: 0.938rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #A5A1AA;
+}
+
+.nav_link{
+    display: flex;
+    align-items: center;
+    color: #58555E;
+}
+
+.nav_link:hover{
+    color: #DC222A;
+}
+
+.nav_icon{
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.nav_name{
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav_logout{
+    margin-top: 5rem;
+}
+
+.nav_dropdown{
+    overflow: hidden;
+    max-height: 21px;
+    transition: 0.4s ease-in-out;
+}
+
+.nav_dropdown-collapse{
+    background-color: #F4F0FA;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+.nav_dropdown-content{
+    display: grid;
+    row-gap: 0.5rem;
+    padding: 0.75rem 2.5rem 0.75rem 1.8rem;
+}
+
+.nav_dropdown-item{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #58555E;
+}
+
+.nav_dropdown-item:hover{
+    color: #DC222A;
+}
+
+.nav_dropdown-icon{
+    margin-left: auto;
+    transition: 0.4s;
+}
+
+.nav_dropdown:hover{
+    max-height: 100rem;
+}
+
+.nav_dropdown:hover .nav_dropdown-icon{
+    transform: rotate(180deg);
+}
+
+.show-menu{
+    left: 0;
+}
+
+.active{
+    color: #DC222A;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        padding: 1rem 3rem 0 6rem;
+    }
+
+    .header{
+        padding: 0 3rem 0 6rem;
+    }
+
+    .header_container{
+        height: calc(3.5rem + 0.5rem);
+    }
+
+    .header_toggle{
+        display: none;
+    }
+
+    .header_logo{
+        display: block;
+    }
+
+    .header_name{
+        width: 40px;
+        height: 40px;
+        order: 1;
+    }
+
+    .nav{
+        left: 0;
+        padding: 1.2rem 1.5rem 3rem;
+        width: 68px;
+    }
+
+    .nav_items{
+        row-gap: 1.7rem;
+    }
+
+    .nav_icon{
+        font-size: 1.3rem;
+    }
+
+    .nav_logo-name, .nav_name, .nav_subtitle, .nav_dropdown-icon{
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .nav:hover{
+        width: 219px;
+    }
+
+    .nav:hover .nav_logo-name{
+        opacity: 1;
+    }
+
+    .nav:hover .nav_subtitle{
+        opacity: 1;
+    }
+
+    .nav:hover .nav_name{
+        opacity: 1;
+    }
+
+    .nav:hover .nav_dropdown-icon{
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        font-size: 1rem;
+    }
+
+    .nav_subtitle{
+        font-size: 1rem;
+    }
+
+    .nav_name{
+        font-size: 0.875rem;
+    }
+
+    .nav_dropdown-item{
+        font-size: 0.813rem;
+    }
+}
+
+/*-------------------------------------------------------Widgets-------------------------------------------------------------*/
+
+section .content_section .widgets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #F9F6FD;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+section .content_section .widgets .container{
+    width: 90%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.container-body{
+    display: grid;
+    grid-template-columns: 100% auto;
+}
+
+.container-body .main-body .tittle{
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 0;  
+}
+
+.container-body .main-body .tittle .greeting{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container-body .main-body .tittle h2{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.container-body .main-body .cards{
+    display: grid;
+    grid-template-rows: 180px 140px;
+    grid-gap: 40px;
+    padding: 20px;
+}
+
+.container-body .main-body .cards .row-2{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 20px;
+}
+
+.container-body .main-body .cards .row .col{
+    background: #ffffff;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+}
+
+.container-body .main-body .cards .row .col .cardtittle{
+    font-size: 16px;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.col .p-i, .u-i, .i-s{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px 5px 20px 20px;
+}
+
+.col .status{
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    position: relative;
+    bottom: 3px;
+}
+
+.total-ads .status{
+    background: #0066cc;
+}
+
+.total-hiredads .status{
+    background: #ff0066;
+}
+
+@media screen and (max-width: 800px){
+
+    .container-body .main-body .cards .row-1{
+        grid-template-columns: 60% 40% auto;
+    }
+
+    .container-body .main-body .cards .row-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-body .main-body .cards .row-2 .col .total-ads, .total-hiredads{
+        height: 130px;
+    }
+
+
+}
+
+
+ /*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+ .deleteAccount{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 300ms ease-in-out;
+    z-index: 3000;
+}
+
+.deleteAccount .modal-content{
+    border-radius: 10px;
+    height: 430px;
+    background-color: #ffffff;
+    transition: all 300ms ease-in-out;
+    position: relative;
+    z-index: 5000;
+}
+
+.close2{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.deleteAccount .modal-content .update_section{
+    background-color: transparent;
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content{
+    border-radius: 10px;
+    padding: 0px;
+    margin: 30px;
+    width: 60%;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content h2{
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #DC222A;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content .update_input{
+    margin-bottom: 5px;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content .update_input span{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #607d8b;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content .update_input input{
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content .update_input input[type="submit"]{
+    background: #DC222A;
+    color: #ffffff;
+    margin-top: 20px;
+    background-size: 200% auto;
+    background-image: linear-gradient(45deg, #DC222A 25%, #E99542);
+    transition: 0.5s;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.deleteAccount .modal-content .update_section .update_form_content .update_input input[type="submit"]:hover{
+    border-radius: 5px;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(220, 34, 42, 0.5);
+}
+
+
+/*-------------------------------------------------------------Media Query----------------------------------------------------------*/
+
+@media(max-width: 600px){
+
+    .deleteAccount{
+        height: 100%;
+        padding-top: 10px;
+    }
+
+    .deleteAccount .modal-content {
+        width: 350px;
+        height: 410px;
+    }
+
+    .deleteAccount .modal-content .update_section .update_form_content{
+        width: 50%;
+    }
+
+    .deleteAccount .modal-content .update_section .update_form_content{
+        width: 100%;
+        margin: 30px;
+    }
+
+    .deleteAccount .modal-content .update_section .update_form_content h2{
+        font-weight: 500;
+    }
+
+    .deleteAccount .modal-content .update_section .update_form_content .update_input span{
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .deleteAccount .modal-content .update_section .update_form_content .update_input input,.modal-content .modal-content.update_section .update_form_content .update_input textarea{
+        padding: 5px 10px;
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+}

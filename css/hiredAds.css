@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: black;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: black;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: black;
+    color: #fff;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+* {
+    font-family: 'Poppins', sans-serif; /* Change your font family */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .content-table tbody tr td button{
+      outline: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+  }
+
+  .content-table tbody tr td button i{
+      margin: 5px;
+  }
+
+  .content-table tbody tr td button .bxs-pencil{
+      color: #42e974;
+      font-weight: 900;
+  }
+
+  .content-table tbody tr td button .bxs-trash-alt{
+    color: red;
+    font-weight: 900;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #000000;
+  }

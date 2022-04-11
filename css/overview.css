@@ -1,0 +1,113 @@
+.widgets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #F9F6FD;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+.container-body{
+    display: grid;
+    grid-template-columns: 100% auto;
+}
+
+.container-body .main-body .tittle{
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 0;  
+}
+
+.container-body .main-body .tittle .greeting{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container-body .main-body .tittle h2{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.container-body .main-body .cards{
+    display: grid;
+    grid-template-rows: 180px 140px;
+    grid-gap: 40px;
+    padding: 20px;
+}
+
+.container-body .main-body .cards .row-1{
+    display: grid;
+    grid-template-columns: 30% 40% auto;
+    grid-gap: 20px;
+}
+
+.container-body .main-body .cards .row-2{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 20px;
+}
+
+.container-body .main-body .cards .row .col{
+    background: #ffffff;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+}
+
+.container-body .main-body .cards .row .col .cardtittle{
+    font-size: 16px;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.total-revenue h2{
+    font-size: 28px;
+    padding: 10px 20px;
+}
+
+.col .t-i, .p-i, .u-i, .i-s{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px 5px 20px 20px;
+}
+
+.col .status{
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    position: relative;
+    bottom: 3px;
+}
+
+.total-users .status{
+    font-weight: 700;
+    color: #339933;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.total-ads .status{
+    background: #0066cc;
+}
+
+.total-hiredads .status{
+    background: #ff0066;
+}
+
+@media screen and (max-width: 800px){
+
+    .container-body .main-body .cards .row-1{
+        grid-template-columns: 60% 40% auto;
+    }
+
+    .container-body .main-body .cards .row-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section .content_section .widgets .container{
+        height: 140vh;
+    }
+}

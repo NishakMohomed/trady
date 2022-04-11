@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: black;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: black;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.adview_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px 0;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 900px;
+    height: 600px;
+    background: #ffffff;
+    margin: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .imgBx{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #212121;
+    transition: 0.3s linear;
+}
+
+.container .imgBx::before{
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    color: #000000;
+    opacity: 0.2;
+    font-size: 8em;
+    font-size: 8em;
+    font-weight: 800;
+}
+
+.container .imgBx img{
+    width: 100%;
+    height: 100%;
+}
+
+.container .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.container .details h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1em;
+    color: #000;
+}
+
+.container .details h2 span{
+    font-size: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.container .details p{
+    max-width: 90%;
+    margin-left: 8%;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+.container .details button{
+    background: #DC222A;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 5px;
+    margin-right: 35px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: right;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(45deg, #DC222A 25%, #E99542);
+}
+
+.container .details button:hover{
+    border-radius: 5px;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(220, 34, 42, 0.5);
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+.bg-modal{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 300ms ease-in-out;
+    z-index: 3000;
+}
+
+.modal-content{
+    width: 600px;
+    height: 580px;
+    margin-bottom: 400px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: all 300ms ease-in-out;
+    position: relative;
+    z-index: 5000;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.bg-modal .modal-content .update_section{
+    background-color: transparent;
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.bg-modal .modal-content .update_section .update_form_content{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin: 30px;
+    width: 60%;
+}
+
+.bg-modal .modal-content .update_section .update_form_content h2{
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #DC222A;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.bg-modal .modal-content .update_section .update_form_content .update_input{
+    margin-bottom: 5px;
+}
+
+.bg-modal .modal-content .update_section .update_form_content .update_input span{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #607d8b;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.bg-modal .modal-content .update_section .update_form_content .update_input input,
+.bg-modal .modal-content .update_section .update_form_content .update_input select,
+.bg-modal .modal-content .update_section .update_form_content .update_input textarea{
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.bg-modal .modal-content .update_section .update_form_content .update_input input[type="submit"]{
+    background: #DC222A;
+    color: #ffffff;
+    margin-top: 20px;
+    background-size: 200% auto;
+    background-image: linear-gradient(45deg, #DC222A 25%, #E99542);
+    transition: 0.5s;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.bg-modal .modal-content .update_section .update_form_content .update_input input[type="submit"]:hover{
+    border-radius: 5px;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(220, 34, 42, 0.5);
+}
+
+
+/*--------------------------------------------------------Media Query-------------------------------------------------------------*/
+
+@media(max-width: 1080px){
+
+    .bg-modal .modal-content {
+        width: 500px;
+        height: 570px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .bg-modal .modal-content .update_section{
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg-modal .modal-content .update_section .update_form_content{
+        width: 100%;
+    }
+
+    .bg-modal .modal-content .update_section .update_form_content h2{
+        font-weight: 500;
+    }
+
+    .bg-modal .modal-content .update_section .update_form_content .update_input span{
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .bg-modal .modal-content .update_section .update_form_content .update_input input,.modal-content .modal-content.update_section .update_form_content .update_input textarea{
+        padding: 5px 10px;
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+}
+
+/*---------------------------------------------------------------Media query-------------------------------------------------------------*/
+
+@media (max-width: 1080px){
+    .container{
+        height: auto;
+    }
+
+    .container .imgBx{
+        padding: 40px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .details{
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container .details p{
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container_widget{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 300ms ease-in-out;
+    z-index: 3000;
+}
+
+.container_widget .close2{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.rate_widget{
+    position: relative;
+    width: 400px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 300ms ease-in-out;
+}
+
+.container_widget  .post{
+    display: none;
+}
+
+.container_widget .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+
+.container_widget .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container_widget .edit:hover{
+    text-decoration: underline;
+}
+
+.container_widget .star-widget form input{
+    display: none;
+}
+
+.star-widget form label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.container_widget .star-widget form input:not(:checked) ~ label:hover,
+.container_widget .star-widget form input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+
+.container_widget .star-widget form input:checked ~ label{
+    color: #fd4;
+}
+
+.container_widget .star-widget form input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked ~ .bottom header:before{
+    content: "Hate it";
+}
+
+#rate-2:checked ~ .bottom header:before{
+    content: "Like it";
+}
+
+#rate-3:checked ~ .bottom header:before{
+    content: "Nice";
+}
+
+#rate-4:checked ~ .bottom header:before{
+    content: "Awesome";
+}
+
+#rate-5:checked ~ .bottom header:before{
+    content: "Love it";
+}
+
+.container_widget .bottom{
+    display: none;
+}
+
+.container_widget .star-widget form input:checked ~ .bottom{
+    display: block;
+}
+
+.container_widget .star-widget form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+
+.container_widget .star-widget form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.container_widget .star-widget form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container_widget .star-widget form .btn button:hover{
+    background: #1b1b1b;
+}

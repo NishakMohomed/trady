@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: black;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: black;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: black;
+    color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+/*---------------------------Space for navbar-----------------------------------------------*/
+
+@media only screen and (min-width: 800px){
+    #spacer{
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+.no_result{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_result .wrapper{
+    text-align: center;
+}
+
+.no_result .wrapper h2{
+    margin: 0 0 40px 0;
+    font-size: 2.5rem;
+}
+
+.no_result .wrapper img{
+    width: 600px;
+    max-width: 75%;
+}
+
+.no_result .wrapper h4{
+    margin: 40px 0 40px;
+    font-size: 1.2rem;
+}
+
+.all-ads{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.all-ads .ads_header{
+    max-width: 120rem;
+    display: flex;
+    margin: 0 auto 30px;
+}
+
+.all-ads .ads_header .ads_result_input{
+    margin-right: 20px;
+}
+
+.all-ads .ads_header .ads_result_input select{
+    width: 100%;
+    padding: 1px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #000000;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.all-ads .ads_header .ads_result_input select::-webkit-scrollbar{
+    display: none;
+}
+
+.ad-content{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.ads-center{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 5rem 3rem;
+}
+
+.ads{
+    height: 40rem;
+    width: 26rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+.ads:hover{
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.ads-image{
+    position: relative;
+    height: 25rem;
+    background-color: #f6f2f1;
+    transition: all 300ms ease-in-out;
+    z-index: 0;
+}
+
+.ads-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.ads-footer{
+    padding: 2rem 1.6rem 1.6rem 1.6rem;
+}
+
+.ads-footer h3{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.ads-footer h4{
+    color: #000000;
+    font-weight: 500;
+}
+
+.rating span i{
+    font-size: 18px;
+    color: #fd4;
+}
+
+@media only screen and (max-width: 1200px){
+
+    .all-ads .ads_header{
+        padding: 0 3rem;
+    }
+
+    .ad-content{
+        padding: 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .all-ads .ads_header .ads_result_input select{
+        width: 100%;
+        padding: 1px 10px;
+        outline: none;
+        font-weight: 400;
+        border: 1px solid #607d8b;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #000000;
+        background: transparent;
+        border-radius: 10px;
+    }
+
+    .no_result .wrapper h2{
+        font-size: 2rem;
+    }
+
+    .no_result .wrapper h4{
+        margin: 40px 0 20px;
+        font-size: 1.2rem;
+    }
+}
