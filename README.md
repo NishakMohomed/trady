@@ -26,3 +26,5 @@ In this web-based system i used paypal for payments feature in order to use this
 2. Add your paypal client id to 'checkout.php' that is located on 'pages/checkout.php' as follows,
 <img src= "images/readmeImages/carbon.png" widht= "250"  height= "350">
 
+3. Import 'tardy.sql' file to phpmyadmin that is located on 'extras/trady.sql'
+
